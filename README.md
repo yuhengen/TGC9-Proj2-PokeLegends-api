@@ -6,7 +6,7 @@ Pokemon Legends is a game project done during my education, where I will utilize
 
 # Note
 This repository only contains the backend codes for the Pokemon Legends project.
-Frontend codes can be found at [TGC9-Proj2-PokeLegends-vue](#)
+Frontend codes can be found at [TGC9-Proj2-PokeLegends-vue](https://github.com/yuhengen/TGC9-Proj2-PokeLegends-vue)
 
 # Sample document from MongoDB
 
