@@ -1,4 +1,4 @@
-# Pokemon Legends
+# Pokémon Legends
 Welcome to Pokémon Legends! Here, you will get to experience a simple Pokémon game, with references to the official Pokémon game battles and some of their systems. All feedbacks regarding the game for improvements are welcome!
 
 ## Context
