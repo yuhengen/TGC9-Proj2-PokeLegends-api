@@ -1,45 +1,177 @@
-<img src="https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png" style="margin: 0;">
+# Pokemon Legends
+Welcome to Pokemon Legends! Here, you will get to experience a simple Pokemon game done by me, with references to the official Pokemon game battles and some of their systems. All feedbacks regarding the game for improvements are welcome!
 
-Welcome USER_NAME,
+## Context
+Pokemon Legends is a game project done during my education, where I will utilize what I learnt in my lectures about Vue, Express and MongoDB to develop a reactive frontend frameworks and RESTful API.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use.
+# Note
+This repository only contains the backend codes for the Pokemon Legends project.
+Frontend codes can be found at [TGC9-Proj2-PokeLegends-vue](#)
 
-## Gitpod Reminders
+# Sample document from MongoDB
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## Collection - userdata
+```
+{
+	"_id": {
+		"$oid": "5fd97e3ad86335c78581f055"
+	},
+	"username": "phantomshiro",
+	"password": "admin",
+	"email": "yuhengen@gmail.com",
+	"gender": "Male",
+	"game_currency": {
+		"$numberInt": "0"
+	},
+	"pokemon_team": [
+		{
+			"pokemon_name": "Charmander",
+			"pokemon_id": {
+				"$numberInt": "4"
+			},
+			"types": [
+				"fire"
+			],
+			"lvl": {
+				"$numberInt": "1"
+			},
+			"exp": {
+				"$numberInt": "0"
+			},
+			"stats": {
+				"hp": {
+					"$numberInt": "39"
+				},
+				"atk": {
+					"$numberInt": "52"
+				},
+				"def": {
+					"$numberInt": "43"
+				},
+				"sp-atk": {
+					"$numberInt": "60"
+				},
+				"sp-def": {
+					"$numberInt": "50"
+				},
+				"speed": {
+					"$numberInt": "65"
+				}
+			}
+		}
+	],
+	"pokedex": [
+		{
+			"pokemon_id": {
+				"$numberInt": "4"
+			},
+			"pokemon_name": "Charmander"
+		}
+	],
+	"badges": [
+		{
+			"badge_name": "Boulder Badge",
+			"badge_id": {
+				"$numberInt": "1"
+			}
+		}
+	],
+	"bag": [
+		{
+			"item_name": "Poke Ball",
+			"item_count": {
+				"$numberInt": "1"
+			},
+			"item_id": {
+				"$numberInt": "1"
+			}
+		}
+	]
+}
+```
 
-`python3 -m http.server`
+## Collection - movesets
+```
+{
+	"_id": {
+		"$oid": "5fd998c8d86335c78581f05a"
+	},
+	"pokemon_id": {
+		"$numberInt": "4"
+	},
+	"pokemon_name": "Charmander",
+	"skillset": [
+		{
+			"attack": "Attack",
+			"power": {
+				"$numberInt": "20"
+			},
+			"type": "Normal"
+		},
+		{
+			"move1": "Ember",
+			"power": {
+				"$numberInt": "20"
+			},
+			"type": "Fire"
+		},
+		{
+			"move2": "Dragonbreath",
+			"power": {
+				"$numberInt": "30"
+			},
+			"type": "Dragon"
+		},
+		{
+			"ultimate": "Flamethrower",
+			"power": {
+				"$numberInt": "45"
+			},
+			"type": "Fire"
+		}
+	]
+}
+```
 
-A blue button should appear to click: *Make Public*,
+## Collection - items
+```
+{
+	"_id": {
+		"$oid": "5fd99d2cd86335c78581f05c"
+	},
+	"item_id": {
+		"$numberInt": "1"
+	},
+	"item_name": "Poke Ball",
+	"item_category": "Poke Balls"
+}
+```
 
-Another blue button should appear to click: *Open Browser*.
-
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
-
-A blue button should appear to click: *Make Public*,
-
-Another blue button should appear to click: *Open Browser*.
-
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
-
-## Updates Since The Instructional Video
-
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
---------
-
-Happy coding!
+## Collection - gymleaders
+```
+{
+	"_id": {
+		"$oid": "5fd99ae1d86335c78581f05b"
+	},
+	"gymleader_name": "Brock",
+	"gymleader_city": "Pewter City",
+	"badge_name": "Boulder Badge",
+	"badge_id": {
+		"$numberInt": "1"
+	},
+	"pokemon_team": [
+		{
+			"pokemon_name": "Charmander",
+			"pokemon_id": {
+				"$numberInt": "4"
+			},
+			"types": [
+				"fire"
+			],
+			"lvl": {
+				"$numberInt": "5"
+			}
+		}
+	]
+}
+```
