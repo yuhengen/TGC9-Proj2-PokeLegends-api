@@ -1,12 +1,12 @@
 # Pokemon Legends
-Welcome to Pokemon Legends! Here, you will get to experience a simple Pokemon game done by me, with references to the official Pokemon game battles and some of their systems. All feedbacks regarding the game for improvements are welcome!
+Welcome to Pokémon Legends! Here, you will get to experience a simple Pokémon game, with references to the official Pokémon game battles and some of their systems. All feedbacks regarding the game for improvements are welcome!
 
 ## Context
-Pokemon Legends is a game project done during my education, where I will utilize what I learnt in my lectures about Vue, Express and MongoDB to develop a reactive frontend frameworks and RESTful API.
+Pokémon Legends is a game project done during my education, where I will utilize what I learnt in my lectures about Vue, Express and MongoDB to develop a reactive frontend frameworks and RESTful API.
 
 # Note
-This repository only contains the backend codes for the Pokemon Legends project.
-Frontend codes can be found at [TGC9-Proj2-PokeLegends-vue](https://github.com/yuhengen/TGC9-Proj2-PokeLegends-vue)
+This repository only contains the backend codes for the Pokémon Legends project.
+Frontend codes can be found at [TGC9-Proj2-PokéLegends-vue](https://github.com/yuhengen/TGC9-Proj2-PokeLegends-vue).
 
 # Sample document from MongoDB
 
