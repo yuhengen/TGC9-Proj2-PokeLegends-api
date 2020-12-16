@@ -31,8 +31,6 @@ function setupExpressApp(app) {
 
     app.use(passport.initialize());
     app.use(passport.session())
-
-
 }
 
 module.exports = { setupExpressApp };
