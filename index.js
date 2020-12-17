@@ -13,6 +13,9 @@ const app = express();
 setupExpressApp(app);
 setupHBS();
 
+var cors = require('cors')
+app.use(cors())
+
 async function main() {
     const MONGO_URL = process.env.MONGO_URL;
     await MongoUtil.connect(MONGO_URL, "tgc9_pokelegends");
