@@ -9,12 +9,20 @@ router.get('/', async (req, res) => {
     res.send(userdata);
 })
 
-router.get('/:username', async (req,res)=> {
+router.get('/:username', async (req, res) => {
     let db = MongoUtil.getDB();
-    let username = await db.collection('userdata').findOne({
-        'username': req.params.username
-    })
+    let username = await db.collection('userdata').findOne({'username': req.params.username})
     res.send(username)
+})
+
+router.post('/', async (req, res) => {
+    let db = MongoUtil.getDB()
+
+    let {username, email} = req.body;
+
+    let results = await db.collection('userdata').insertOne({username, email})
+
+    res.send({'insertedId': results.insertedId})
 })
 
 module.exports = router;
