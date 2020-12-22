@@ -19,7 +19,14 @@ findUserByEmail = async (email) => {
         'email': email
     })
     return user;
+}
 
+findUserByUsername = async (username) => {
+    db = MongoUtil.getDB();
+    let user = await db.collection('userdata').findOne({
+        'username': username
+    })
+    return user;
 }
 
 findUserById = async (id) => {

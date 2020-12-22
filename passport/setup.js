@@ -45,4 +45,21 @@ passport.use(
     })
 )
 
+// passport.use(
+//     new LocalStrategy({
+//         'usernameField': 'username'
+//     }, async function (username, done) {
+//         let user = await UserModel.findUserByUsername(username);
+//         if (user) {
+//             console.log("user logged in successfully in passport")
+//             // all good- the user exists
+//             done(null, user);
+//         } else {
+//             done(null, false, {
+//                 message: 'Invalid username'
+//             })
+//         }
+//     })
+// )
+
 module.exports = passport;
