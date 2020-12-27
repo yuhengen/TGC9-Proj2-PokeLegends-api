@@ -23,9 +23,9 @@ router.get('/:username', async (req, res) => {
 router.post('/', async (req, res) => {
     let db = MongoUtil.getDB()
 
-    let { username, password, email, gender } = req.body;
+    let { username, password, email, gender, game_currency, party_pokemon, store_pokemon, pokedex, badges, bag, tutorial } = req.body;
 
-    let results = await db.collection('userdata').insertOne({ username, password, email, gender })
+    let results = await db.collection('userdata').insertOne({ username, password, email, gender, game_currency, party_pokemon, store_pokemon, pokedex, badges, bag, tutorial })
 
     res.send({ 'insertedId': results.insertedId })
 })
