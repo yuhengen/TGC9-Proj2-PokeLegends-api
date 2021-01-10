@@ -28,4 +28,22 @@ router.post('/', async (req, res) => {
     res.send({ 'insertedId': results.insertedId })
 })
 
+// update account
+router.patch('/:username', async (req, res) => {
+    let db = MongoUtil.getDB();
+    let username = req.params.username
+
+    let { password, email, gender, pokedollar, party_pokemon, store_pokemon, pokedex, badges, bag, tutorial } = req.body;
+
+    let results = await db.collection('userdata').updateOne({
+        'username': username
+    },
+        {
+            '$set': {
+                password, email, gender, pokedollar, party_pokemon, store_pokemon, pokedex, badges, bag, tutorial
+            }
+
+        });
+})
+
 module.exports = router;
