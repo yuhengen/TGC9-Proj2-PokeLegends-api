@@ -44,6 +44,8 @@ router.patch('/:username', async (req, res) => {
             }
 
         });
+
+    res.send({ 'status': 'OK' })
 })
 
 module.exports = router;
