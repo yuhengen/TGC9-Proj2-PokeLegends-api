@@ -1,37 +1,38 @@
 {
-  "name": "tgc9-proj2-pokelegends-api",
-  "version": "1.0.0",
-  "description": "Welcome to Pokémon Legends! Here, you will get to experience a simple Pokémon game, with references to the official Pokémon game battles and some of their systems. All feedbacks regarding the game for improvements are welcome!",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/yuhengen/tgc9-proj2-PokeLegends-api.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/yuhengen/tgc9-proj2-PokeLegends-api/issues"
-  },
-  "homepage": "https://github.com/yuhengen/tgc9-proj2-PokeLegends-api#readme",
-  "dependencies": {
-    "axios": "^0.21.0",
-    "bcryptjs": "^2.4.3",
-    "connect-flash": "^0.1.1",
-    "cookie-parser": "^1.4.5",
-    "cors": "^2.8.5",
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1",
-    "express-session": "^1.17.1",
-    "handlebars-helpers": "^0.10.0",
-    "hbs": "^4.1.1",
-    "jsonwebtoken": "^8.5.1",
-    "mongodb": "^3.6.3",
-    "passport": "^0.4.1",
-    "passport-local": "^1.0.0",
-    "uuid": "^8.3.2",
-    "wax-on": "^1.2.2"
-  }
+    "name": "tgc9-proj2-pokelegends-api",
+    "version": "1.0.0",
+    "description": "Welcome to Pokémon Legends! Here, you will get to experience a simple Pokémon game, with references to the official Pokémon game battles and some of their systems. All feedbacks regarding the game for improvements are welcome!",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/yuhengen/tgc9-proj2-PokeLegends-api.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/yuhengen/tgc9-proj2-PokeLegends-api/issues"
+    },
+    "homepage": "https://github.com/yuhengen/tgc9-proj2-PokeLegends-api#readme",
+    "dependencies": {
+        "axios": "^0.21.0",
+        "bcryptjs": "^2.4.3",
+        "connect-flash": "^0.1.1",
+        "cookie-parser": "^1.4.5",
+        "cors": "^2.8.5",
+        "dotenv": "^8.2.0",
+        "express": "^4.17.1",
+        "express-session": "^1.17.1",
+        "handlebars-helpers": "^0.10.0",
+        "hbs": "^4.1.1",
+        "jsonwebtoken": "^8.5.1",
+        "mongodb": "^3.6.3",
+        "passport": "^0.4.1",
+        "passport-local": "^1.0.0",
+        "uuid": "^8.3.2",
+        "wax-on": "^1.2.2"
+    }
 }

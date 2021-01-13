@@ -33,14 +33,14 @@ router.patch('/:username', async (req, res) => {
     let db = MongoUtil.getDB();
     let username = req.params.username
 
-    let { password, email, gender, pokedollar, party_pokemon, store_pokemon, pokedex, badges, bag, tutorial } = req.body;
+    let { pokedollar, party_pokemon, store_pokemon, pokedex, badges, bag, tutorial } = req.body;
 
     let results = await db.collection('userdata').updateOne({
         'username': username
     },
         {
             '$set': {
-                password, email, gender, pokedollar, party_pokemon, store_pokemon, pokedex, badges, bag, tutorial
+                pokedollar, party_pokemon, store_pokemon, pokedex, badges, bag, tutorial
             }
 
         });
