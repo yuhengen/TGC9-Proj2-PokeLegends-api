@@ -13,7 +13,7 @@ router.get('/', async (req, res) => {
 
 router.get('/:username', async (req, res) => {
     let db = MongoUtil.getDB();
-    let username = await db.collection('userdata').findOne({ 'username': req.params.username })
+    let username = await db.collection('userdata').findOne({'username': req.params.username})
     res.send(username)
 })
 
@@ -21,11 +21,37 @@ router.get('/:username', async (req, res) => {
 router.post('/', async (req, res) => {
     let db = MongoUtil.getDB()
 
-    let { username, password, email, gender, pokedollar, party_pokemon, store_pokemon, pokedex, badges, bag, tutorial } = req.body;
+    let {
+        username,
+        password,
+        email,
+        gender,
+        nickname,
+        pokedollar,
+        party_pokemon,
+        store_pokemon,
+        pokedex,
+        badges,
+        bag,
+        tutorial
+    } = req.body;
 
-    let results = await db.collection('userdata').insertOne({ username, password, email, gender, pokedollar, party_pokemon, store_pokemon, pokedex, badges, bag, tutorial })
+    let results = await db.collection('userdata').insertOne({
+        username,
+        password,
+        email,
+        gender,
+        nickname,
+        pokedollar,
+        party_pokemon,
+        store_pokemon,
+        pokedex,
+        badges,
+        bag,
+        tutorial
+    })
 
-    res.send({ 'insertedId': results.insertedId })
+    res.send({'insertedId': results.insertedId})
 })
 
 // update account
@@ -33,19 +59,32 @@ router.patch('/:username', async (req, res) => {
     let db = MongoUtil.getDB();
     let username = req.params.username
 
-    let { pokedollar, party_pokemon, store_pokemon, pokedex, badges, bag, tutorial } = req.body;
+    let {
+        pokedollar,
+        party_pokemon,
+        store_pokemon,
+        pokedex,
+        badges,
+        bag,
+        tutorial
+    } = req.body;
 
     let results = await db.collection('userdata').updateOne({
         'username': username
-    },
-        {
-            '$set': {
-                pokedollar, party_pokemon, store_pokemon, pokedex, badges, bag, tutorial
-            }
+    }, {
+        '$set': {
+            pokedollar,
+            party_pokemon,
+            store_pokemon,
+            pokedex,
+            badges,
+            bag,
+            tutorial
+        }
 
-        });
+    });
 
-    res.send({ 'status': 'OK' })
+    res.send({'status': 'OK'})
 })
 
 module.exports = router;
